@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+/*将标题，评分图标以及评分文字说明三者并排排列*/
+.am-rate-title, .am-rate-wrapper, .am-rate-text {
+  display: inline-block;
+}
+/*默认未选中时候的时候图标的颜色*/
+.am-rate-wrapper a {
+  color: #e5e5e5;
+}
+/*选中后图标的颜色*/
+.am-rate-wrapper .active {
+  color: #0e90d2;
+}

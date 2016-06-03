@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AmazeUI Rate插件</title>
+  <link rel="stylesheet" href="../dist/amazeui.min.css">
+  <link rel="stylesheet" href="../dist/amazeui.rate.css">
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div class="am-g">
+
+    <!-- 标题开始 -->
+    <div class="am-u-sm-12">
+      <h1>AmazeUI Rate插件</h1>  
+    </div>
+    <!-- 标题结束 -->
+
+    <!-- 插件说明开始 -->
+    <div class="am-u-sm-12">
+      <p>这是一个基于AmazeUI扩展而来的评分插件，有自定义性强，容易使用的特点,依赖与AmazeUI和jQuery，以及集合在AmazeUI图标中的字体图标。用户只需要拷贝相应的HTML的DOM结构，调用.rate()方法即可生成一个默认配置的评分插件；若想要个性化的评分亦可在AmazeUI图标内选择相应的图标，记录下该图标的类名，并将该类名作为参数传入即可快速完成个性化的评分插件。若要更改插件的评分等级数以及对应的评分文字说明只要将评分文字说明由最低等级到最高等级排列的数组传入，即可达到个性化的评分插件。具体使用方法可以参考下列的几个例子，但不仅仅局限于下列例子。</p>
+    </div>
+    <!-- 插件说明结束 -->
+    
+    <!-- 插件使用说明开始 -->
+    <div class="am-u-sm-12">
+      <p>一.插件说明</p>
+      <p>插件使用说明会按照以下几点进行诠释</p>
+      <ol>
+        <li>插件依赖的文件</li>
+        <li>插件自身的文件</li>
+        <li>需要使用的HTML DOM结构</li>
+        <li>插件js调用方法</li>
+      </ol>
+    </div>
+    <!-- 插件使用说明结束 -->
+
+    <!-- 插件依赖的文件开始 -->
+    <div class="am-u-sm-12">
+      <h2>插件依赖的文件</h2>
+      <p>插件依赖于AmazeUI，首先我们必须引入AmazeUI的CSS文件以及对应的JS文件。由于AmazeUI依赖与jQuery，我们的插件也是基于jQuery扩展而来的，同时，插件亦依赖于AmazeUI中的字体图标。在使用插件前请核对如下依赖是否引入：</p>
+      <ol>
+        <li>AmazeUI（包括css文件，js文件，以及css引入字体图标需要的fonts文件夹中的字体文件）</li>
+        <li>jQuery</li>
+      </ol>
+    </div>
+    <!-- 插件依赖的文件结束 -->
+
+    <!-- 插件自身的文件开始 -->
+    <div class="am-u-sm-12">
+      <h2>插件自身的文件</h2>
+      <p>插件自身的文件仅有两个，一个是css文件amazeui.rate.css，一个是js文件，amazeui.rate.js。使用之前请确保如下条件是否满足</p>
+      <ol>
+        <li>引入amazeui.rate.css</li>
+        <li>确保在引入jQuery之后引入amazueui.rate.js</li>
+      </ol>
+    </div>
+    <!-- 插件自身的文件结束 -->
+
+    <!-- 需要使用的HTML DOM结构开始 -->
+    <div class="am-u-sm-12">
+      <h2>需要使用的HTML DOM结构</h2>
+      <p>使用之前请确保您的HTML DOM结构如下：</p>
+      <textarea cols="58" rows="7">
+
+        <div class="am-rate">
+          <span class="am-rate-title">这里填入评分标题文字</span>
+          <div class="am-rate-wrapper"></div>
+          <span class="am-rate-text">这里填入未选择时的提示文字</span>
+        </div>
+
+      </textarea>
+      <p>解释说明：</p>
+      <ol>
+        <li>.am-rate-title标签里面的文字放入评分的标题文字;</li>
+        <li>.am-rate-text标签里面放入未选择时的提示文字</li>
+      </ol>
+    </div>
+    <!-- 需要使用的HTML DOM结构结束 -->
+
+    <!-- 插件js调用方法开始 -->
+    <div class="am-u-sm-12">
+      <h2>插件js调用方法</h2>
+      <p>在调用插件前需要满足已经引入插件依赖以及自身插件文件，如下有几个例子，默认配置为没有传入参数的默认配置形式，自定义配置为传入参数的形式，具体可以参考项目README.md文件。插件js调用方法如下：</p>
+    </div>
+    <!-- 插件js调用方法结束 -->
+
+    <!-- 默认配置说明开始 -->
+    <div class="am-u-sm-12">
+      <h3>1.默认配置使用方法：$(selector).rate()</h3>
+    </div>
+    <!-- 默认配置说明结束 -->
+
+    <!-- 默认配置例子开始 -->
+    <div class="am-u-sm-12">
+      <p>默认配置浏览：</p>
+      <div class="am-rate" id="J_Demo1">
+        <span class="am-rate-title">满意度:</span>
+        <div class="am-rate-wrapper"></div>
+        <span class="am-rate-text">请先选择满意度</span>
+      </div>
+      <p>HTML DOM结构：</p>
+      <textarea cols="66" rows="7">
+
+        <div class="am-rate" id="J_Demo1">
+          <span class="am-rate-title">满意度:</span>
+          <div class="am-rate-wrapper"></div>
+          <span class="am-rate-text">请先选择满意度</span>
+        </div>
+      </textarea>
+      <p>js调用方法：</p>
+      <textarea cols="66" rows="1">
+        $('#J_Demo1').rate();
+      </textarea>
+    </div>
+    <!-- 默认配置例子结束 -->
+
+    <!-- config参数说明开始 -->
+    <div class="am-u-sm-12 margin-top">
+      <h3>＊config参数说明</h3>
+      <p>.rate()方法接受一个对象参数，若要自定义参数，需要传入相应的参数以及内容</p>
+      <p>config对象如下所示：</p>
+      <pre>
+        {
+          arrayData: [],//数组，按照评分等级从低到高传入评分等级对应的说明文字，默认为['很不满意', '不满意', '一般', '满意' ,'非常满意']
+          icon: '', //字符串，传入i标签的类名，具体参考amazeUI中的图标，默认值为'am-icon-star'
+          init: 0, //初始评价等级，默认值为0，即未选择评价等级
+          debug: false //布尔值，调试是否打开，默认不打开，如打开，则输入布尔值true
+        }
+      </pre>
+    </div>
+    <!-- config参数说明结束 -->
+
+    <!-- 自定义配置1说明开始 -->
+    <div class="am-u-sm-12 margin-top">
+      <h3>2.自定义配置1使用方法：$(selector).rate(config)</h3>
+    </div>
+    <!-- 自定义配置1说明结束 -->
+    
+    <!-- 自定义配置1例子开始 -->
+    <div class="am-u-sm-12">
+      <p>自定义配置1浏览：</p>
+      <div class="am-rate" id="J_Demo2">
+        <span class="am-rate-title">评分:</span>
+        <div class="am-rate-wrapper"></div>
+        <span class="am-rate-text">请先选择评分</span>
+      </div>
+      <p>HTML DOM结构：</p>
+      <textarea cols="66" rows="7">
+
+        <div class="am-rate" id="J_Demo2">
+          <span class="am-rate-title">评分:</span>
+          <div class="am-rate-wrapper"></div>
+          <span class="am-rate-text">请先选择评分</span>
+        </div>
+      </textarea>
+      <p>js调用方法：</p>
+      <textarea cols="66" rows="8">
+
+        $('#J_Demo2').rate({
+          arrayData: ['1分', '2分', '3分', '4分', '5分', '6分', '7分', '8分', '9分', '10分'],
+          icon: 'am-icon-check',
+          init: 5
+        });
+      </textarea>
+    </div>
+    <!-- 自定义配置1例子结束 -->
+    
+    <!-- 自定义配置2说明开始 -->
+    <div class="am-u-sm-12 margin-top">
+      <h3>3.自定义配置2使用方法：$(selector).rate(config)</h3>
+    </div>
+    <!-- 自定义配置2说明结束 -->
+    
+    <!-- 自定义配置2例子开始 -->
+    <div class="am-u-sm-12">
+      <p>自定义配置2浏览：</p>
+      <div class="am-rate" id="J_Demo3">
+        <span class="am-rate-title">心动程度:</span>
+        <div class="am-rate-wrapper"></div>
+        <span class="am-rate-text">请先选择心动程度</span>
+      </div>
+      <p>HTML DOM结构：</p>
+      <textarea cols="66" rows="7">
+
+        <div class="am-rate" id="J_Demo3">
+          <span class="am-rate-title">心动程度:</span>
+          <div class="am-rate-wrapper"></div>
+          <span class="am-rate-text">请先选择心动程度</span>
+        </div>
+      </textarea>
+      <p>js调用方法：</p>
+      <textarea cols="66" rows="7">
+
+        $('#J_Demo3').rate({
+          arrayData: ['不心动', '较心动', '非常心动'],
+          icon: 'am-icon-heart',
+          init: 3
+        });
+      </textarea>
+    </div>
+    <!-- 自定义配置2例子结束 -->
+
+
+
+  </div>
+  
+  <footer class="text-center">
+    
+  </footer>
+  
+
+  <script src="../dist/jquery.min.js"></script>
+  <script src="../dist/amazeui.min.js"></script>
+  <script src="../dist/amazeui.rate.js"></script>
+  <script src="demo.js"></script>
+
+</body>
+</html>
